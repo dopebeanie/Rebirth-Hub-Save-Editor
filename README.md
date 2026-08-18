@@ -86,19 +86,19 @@ Flags can be combined. Requires `pycryptodome` and `msgpack`.
 ### 📁 Repository structure
 
 ```
-RebirthPub_SaveEditor.exe   # готовый GUI-редактор (Releases)
-rebirth_save_editor_gui.py  # исходник GUI-версии (tkinter)
-rebirth_save_editor.py      # CLI-версия (логика шифрования сейва)
-requirements.txt            # зависимости для CLI-версии
-icon.ico / icon.png         # иконка приложения
-README.md                   # этот файл
+RebirthPub_SaveEditor.exe   # ready-to-use GUI editor (Releases)
+rebirth_save_editor_gui.py  # GUI source code (tkinter)
+rebirth_save_editor.py      # CLI version (save decryption logic)
+requirements.txt            # dependencies for the CLI version
+icon.ico / icon.png         # app icon
+README.md                   # this file
 ```
 
 ### 🛠️ Build from source
 
 ```bash
 pip install -r requirements.txt          # runtime (CLI)
-pip install pyinstaller pillow           # только для сборки exe
+pip install pyinstaller pillow           # only needed to build the exe
 
 python -m PyInstaller --noconfirm --onefile --windowed \
   --name "RebirthPub_SaveEditor" --icon icon.ico rebirth_save_editor_gui.py
