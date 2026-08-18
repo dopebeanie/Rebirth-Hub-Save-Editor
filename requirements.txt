@@ -1,0 +1,7 @@
+# Runtime dependencies (нужны для CLI-версии rebirth_save_editor.py)
+pycryptodome>=3.20
+msgpack>=1.0
+
+# Build dependencies (для сборки GUI в .exe) — нужны только при компиляции:
+# pyinstaller>=6.0
+# pillow>=10.0
