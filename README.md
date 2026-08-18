@@ -31,6 +31,7 @@ Extras:
 - 👀 View current save values
 - 📋 Full item list with Russian names
 - 🌙 Dark theme, one-click **"Apply"**
+- 👤 Credits & author info in the app footer + "About" dialog
 
 ### 🔧 How it works
 
@@ -82,6 +83,29 @@ python rebirth_save_editor.py --menu          # interactive menu
 
 Flags can be combined. Requires `pycryptodome` and `msgpack`.
 
+### 📁 Repository structure
+
+```
+RebirthPub_SaveEditor.exe   # готовый GUI-редактор (Releases)
+rebirth_save_editor_gui.py  # исходник GUI-версии (tkinter)
+rebirth_save_editor.py      # CLI-версия (логика шифрования сейва)
+requirements.txt            # зависимости для CLI-версии
+icon.ico / icon.png         # иконка приложения
+README.md                   # этот файл
+```
+
+### 🛠️ Build from source
+
+```bash
+pip install -r requirements.txt          # runtime (CLI)
+pip install pyinstaller pillow           # только для сборки exe
+
+python -m PyInstaller --noconfirm --onefile --windowed \
+  --name "RebirthPub_SaveEditor" --icon icon.ico rebirth_save_editor_gui.py
+```
+
+The ready `.exe` appears in `dist/`.
+
 ### ⚠️ Warning
 
 - Always close the game before editing.
@@ -112,6 +136,7 @@ Flags can be combined. Requires `pycryptodome` and `msgpack`.
 - 👀 Просмотр текущих значений сейва
 - 📋 Список всех предметов с русскими названиями
 - 🌙 Тёмная тема, применение в один клик
+- 👤 Кредиты автора в футере приложения + кнопка «О программе»
 
 ### 🔧 Как работает
 
@@ -162,6 +187,29 @@ python rebirth_save_editor.py --menu          # интерактивное ме�
 ```
 
 Флаги можно комбинировать. Требуется `pycryptodome` и `msgpack`.
+
+### 📁 Структура репозитория
+
+```
+RebirthPub_SaveEditor.exe   # готовый GUI-редактор (Releases)
+rebirth_save_editor_gui.py  # исходник GUI-версии (tkinter)
+rebirth_save_editor.py      # CLI-версия (логика шифрования сейва)
+requirements.txt            # зависимости для CLI-версии
+icon.ico / icon.png         # иконка приложения
+README.md                   # этот файл
+```
+
+### 🛠️ Сборка из исходников
+
+```bash
+pip install -r requirements.txt          # runtime (CLI)
+pip install pyinstaller pillow           # только для сборки exe
+
+python -m PyInstaller --noconfirm --onefile --windowed \
+  --name "RebirthPub_SaveEditor" --icon icon.ico rebirth_save_editor_gui.py
+```
+
+Готовый `.exe` появится в `dist/`.
 
 ### ⚠️ Предупреждение
 
